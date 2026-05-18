@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://ecolifestyle-backend.onrender.com";
 
 let loading = false;
 const history = [];
