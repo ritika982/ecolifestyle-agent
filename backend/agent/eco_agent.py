@@ -40,7 +40,7 @@ REASON: why you chose these tools
 Only include tools that are actually needed for this question."""
 
         response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[{"role": "user", "content": thinking_prompt}],
             max_tokens=150,
             temperature=0.1
@@ -130,7 +130,7 @@ Make it personal to {location}."""
             messages.extend(self.conversation_history)
 
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=messages,
                 max_tokens=800,
                 temperature=0.7
@@ -154,7 +154,7 @@ Make it personal to {location}."""
     def get_daily_tips(self):
         try:
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=[
                     {
                         "role": "system",
